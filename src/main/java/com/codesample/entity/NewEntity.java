@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class NewEntity {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@Column(name = "title")
@@ -21,6 +21,17 @@ public class NewEntity {
 	
 	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
+
+	public NewEntity() {
+	}
+
+	public NewEntity(Long id, String title, String thumbnail, String shortDescription, String content) {
+		this.id = id;
+		this.title = title;
+		this.thumbnail = thumbnail;
+		this.shortDescription = shortDescription;
+		this.content = content;
+	}
 
 	public Long getId() {
 		return id;
