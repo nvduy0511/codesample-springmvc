@@ -1,8 +1,11 @@
 package com.codesample.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
 @Table(name = "doexercise")
 public class DoExercise {
@@ -34,7 +37,5 @@ public class DoExercise {
     @Temporal(TemporalType.TIMESTAMP)
     private Date time;
 
-    public DoExercise() {
-    }
 
 }
