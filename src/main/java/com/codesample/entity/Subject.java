@@ -1,11 +1,14 @@
 package com.codesample.entity;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Data
 @Entity
 @Table(name = "subject")
 public class Subject {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,4 +25,6 @@ public class Subject {
     @Column(name = "image_Url")
     private String image_Url;
 
+    @OneToMany(mappedBy = "subject")
+    private Set<Theory> theories;
 }

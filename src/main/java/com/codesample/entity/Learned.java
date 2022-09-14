@@ -1,23 +1,24 @@
 package com.codesample.entity;
 
 import com.codesample.entity.key.LearnedKey;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "learned")
 @IdClass(LearnedKey.class)
 public class Learned {
 
     @Id
-    @Column(name = "idTheory")
-    private int idTheory;
+    @ManyToOne
+    @JoinColumn(name = "idTheory", nullable = false)
+    private Theory theory;
 
     @Id
-    @Column(name = "idUser")
-    private String idUser;
-
-    public Learned() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "idUser", nullable = false)
+    private User user;
 
 }
