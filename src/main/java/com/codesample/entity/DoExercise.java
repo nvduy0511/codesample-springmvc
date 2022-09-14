@@ -14,12 +14,6 @@ public class DoExercise {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "idUser")
-    private int idUser;
-
-    @Column(name = "idExercise")
-    private int idExercise;
-
     @Column(name = "status")
     private int status;
 
@@ -37,5 +31,13 @@ public class DoExercise {
     @Temporal(TemporalType.TIMESTAMP)
     private Date time;
 
+    //foreign key
+    @ManyToOne
+    @JoinColumn(name = "idExercise", nullable = false)
+    private Exercise exercise;
+
+    @ManyToOne
+    @JoinColumn(name = "idUser", nullable = false)
+    private User user;
 
 }

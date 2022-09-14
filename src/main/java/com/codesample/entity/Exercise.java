@@ -1,7 +1,11 @@
 package com.codesample.entity;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Data
 @Entity
 @Table(name = "exercise")
 public class Exercise {
@@ -50,13 +54,19 @@ public class Exercise {
     @Column(name = "status")
     private int status;
 
-    @Column(name = "idUser")
-    private int idUser;
-
     @Column(name = "tag", length = 20)
     private String tag;
 
-    public Exercise() {
-    }
+    //foreign key
+    @ManyToOne
+    @JoinColumn(name="idAdmin", nullable=false)
+    private Admin admin;
+
+    //One to Many relationship
+    @OneToMany(mappedBy = "exercise")
+    private Set<TestCase> testCases;
+
+    @OneToMany(mappedBy = "exercise")
+    private Set<DoExercise> doExercises;
 
 }
