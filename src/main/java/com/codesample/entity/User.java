@@ -2,6 +2,7 @@ package com.codesample.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -28,5 +29,16 @@ public class User {
 
     @Column(name = "fullName")
     private String fullName;
+
+    //One to Many relationship
+    @OneToMany(mappedBy = "user")
+    private Set<DoExercise> doExercises;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Learned> learnedss;
+
+    @OneToMany(mappedBy = "user")
+    private Set<FeedBack> feedBacks;
+
 
 }

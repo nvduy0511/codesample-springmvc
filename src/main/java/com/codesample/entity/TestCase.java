@@ -17,7 +17,8 @@ public class TestCase {
     @Column(name = "output", length = 500)
     private String output;
 
-    @Column(name = "idExercise")
-    private int idExercise;
+    @ManyToOne
+    @JoinColumn(name = "idExercise", nullable=false)
+    private Exercise exercise;
 
 }
