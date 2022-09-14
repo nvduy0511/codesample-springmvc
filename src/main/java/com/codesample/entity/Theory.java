@@ -1,6 +1,8 @@
 package com.codesample.entity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "theory")
@@ -18,8 +20,12 @@ public class Theory {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "idSubject")
-    private int idSubject;
 
+    @ManyToOne
+    @JoinColumn(name = "idSubject", nullable = false)
+    private Theory theory;
+
+    @OneToMany(mappedBy = "learned")
+    private Set<Learned> learneds;
 
 }

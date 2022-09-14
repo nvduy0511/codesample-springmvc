@@ -18,6 +18,8 @@ public class FeedBack {
     @Column(name = "messages")
     private String messages;
 
-    @Column(name = "idUser")
-    private int idUser;
+
+    @ManyToOne
+    @JoinColumn(name = "idUser", nullable = false)
+    private User user;
 }
