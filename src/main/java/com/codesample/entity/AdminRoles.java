@@ -1,23 +1,26 @@
 package com.codesample.entity;
 
 import com.codesample.entity.key.AdminRolesKey;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "adminroles")
 @IdClass(AdminRolesKey.class)
 public class AdminRoles {
     @Id
-    @Column(name = "idAdmin")
-    private int idAdmin;
+    @ManyToOne
+    @JoinColumn(name = "idAdmin", nullable = false)
+    private Admin admin;
 
-    @Column(name = "idRoles")
     @Id
-    private String idRoles;
+    @ManyToOne
+    @JoinColumn(name = "idRoles", nullable = false)
+    private Roles roles;
 
     public AdminRoles() {
-
     }
 
 }

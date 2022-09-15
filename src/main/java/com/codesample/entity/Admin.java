@@ -1,6 +1,7 @@
 package com.codesample.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "admin")
@@ -21,6 +22,13 @@ public class Admin {
 
     @Column(name = "fullName")
     private String fullName;
+
+    // One to Many relationship
+    @OneToMany(mappedBy = "admin")
+    private Set<Exercise> exercises;
+
+    @OneToMany(mappedBy = "admin")
+    private Set<AdminRoles> adminRoless;
 
     public Admin() {
     }
