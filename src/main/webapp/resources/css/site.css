@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+}
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+/*Mobile*/
+@media only screen and (max-width: 740px) {
+    .container-right {
+        flex-direction: row-reverse;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+        gap: 10px;
+    }
+}
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.body-container{
+
+}
+
+.footer {
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.isSelect{
+    border-bottom: solid 1px #0366d6;
+}
+/*custom styles*/
+.container-right {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    align-items: center;
+}
+
+.nav-user img{
+    height: 36px;
+    border-radius: 18px;
+}
+.nav-user img:hover{
+    opacity:0.8;
+    cursor:pointer;
+}
+
+.userNavItems {
+    display:block;
+    height: max-content;
+    padding: 10px 0px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+    transition: opacity 300ms ease 0s;
+}
+
+.item_userNav {
+    color: rgb(66, 67, 69);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+    text-decoration: none !important;
+}
+
+.item_userNav:hover {
+    background-color: rgb(241 241 242);
+}
+
+.item_userNav p {
+    font-size: 17px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.item-icon {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tippy-box
+{
+    background-color:unset;
+}
+
+
+.Footer {
+    box-sizing: border-box;
+    height: 250px;
+    padding-right: 5rem;
+    color: #2C31CF;
+    box-sizing: border-box;
+    /* position: static; */
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+/*******************************/
+.Logo_Footer {
+    display: block;
+    margin-top: 20px;
+    height: fit-content;
+    height: 160px;
+    max-width: 580px;
+}
+
+.Logo_Footer img {
+    max-width: 280px;
+}
+
+.SocialNetwork {
+    margin: 0px;
+    margin-left: 40px;
+    list-style-type: none;
+    padding: 0px;
+    box-sizing: border-box;
+    /* display: block; */
+}
+
+.SocialNetwork li {
+    display: inline;
+}
+
+.SocialNetwork li a img {
+    max-height: 50px;
+}
+/*******************************/
+
+.Right_footer {
+    margin-top: 20px;
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+}
+
+
+.List {
+    /* display: block; */
+    text-align: left;
+    padding-inline-start: 0px;
+    box-sizing: border-box;
+}
+
+.List li {
+    margin-top: 9px;
+    list-style-type: none;
+}
+
+.List li a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.List li a:hover {
+    text-decoration: underline;
+}
