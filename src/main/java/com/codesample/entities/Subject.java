@@ -26,6 +26,7 @@ public class Subject {
     @Column(name = "image_Url")
     private String image_Url;
 
+    @Transient
     @OneToMany(mappedBy = "subject")
     @JsonIgnore
     private Set<Theory> theories;
