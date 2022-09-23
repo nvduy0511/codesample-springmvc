@@ -1,0 +1,52 @@
+:root {
+    --header-background-color: #f5f5f5;
+    --text-color: #636668;
+}
+
+body {
+    font-family: "Helvetica, Arial, sans-serif;";
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    gap: 10px;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d2d4d6;
+    background-color: var(--header-background-color);
+}
+
+#header > i {
+    font-size: 30px;
+}
+
+#content {
+    margin: 10px 100px;
+    font-size: 19px;
+    min-height: 100vh;
+    text-transform: capitalize;
+    line-height: 30px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #header {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    #header h1 {
+        width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #content {
+        font-size: 16px;
+        margin: 10px 20px;
+    }
+}
