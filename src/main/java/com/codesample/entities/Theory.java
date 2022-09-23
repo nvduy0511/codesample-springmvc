@@ -22,11 +22,13 @@ public class Theory {
     @Column(name = "content")
     private String content;
 
-
+//    @Transient
     @ManyToOne
     @JoinColumn(name = "idSubject", nullable = false)
     private Subject subject;
 
+
+    @Transient
     @OneToMany(mappedBy = "theory")
     @JsonIgnore
     private Set<Learned> learneds;
