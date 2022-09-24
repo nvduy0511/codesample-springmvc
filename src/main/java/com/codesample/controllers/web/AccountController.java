@@ -27,7 +27,7 @@ public class AccountController {
 
     @GetMapping("/login-or-register")
     public String loginOrRegister(){
-        return "web/LoginOrRegister";
+        return "web/login-or-register";
     }
 
     @PostMapping("/login")
@@ -57,7 +57,7 @@ public class AccountController {
 
     @GetMapping("/forgot-password")
     public String forgotPassword(){
-        return "web/ForgotPassword";
+        return "web/forgot-password";
     }
 
     @PostMapping("/forgot-password")
