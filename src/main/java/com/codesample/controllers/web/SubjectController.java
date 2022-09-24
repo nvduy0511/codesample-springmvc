@@ -9,10 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.jws.WebParam;
 import java.util.List;
 
 @Controller
@@ -46,14 +44,10 @@ public class SubjectController {
     @RequestMapping(value = "/lythuyet/baihoc/{id}", method = RequestMethod.GET)
     public ModelAndView TheoryDetail(@PathVariable int id){
         Theory item = theoryService.findOne(id);
-        ModelAndView theoryDetail = new ModelAndView("web/theoryDetail");
+        ModelAndView theoryDetail = new ModelAndView("web/theory-detail");
         theoryDetail.addObject("item", item);
         return theoryDetail;
     }
 
-//    @RequestMapping("/get-all-subject")
-//    public List<Subject> getAll(){
-//        return subjectService.findAll();
-//    }
 
 }
