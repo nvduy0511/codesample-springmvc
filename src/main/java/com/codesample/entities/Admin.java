@@ -28,10 +28,12 @@ public class Admin {
     private String fullName;
 
     // One to Many relationship
+    @Transient
     @OneToMany(mappedBy = "admin")
     @JsonIgnore
     private Set<Exercise> exercises;
 
+    @Transient
     @OneToMany(mappedBy = "admin")
     @JsonIgnore
     private Set<AdminRole> adminRoles;
