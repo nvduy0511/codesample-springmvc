@@ -20,20 +20,20 @@
             <header>
                 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
                     <div class="container">
-                        <a class="navbar-brand" >CodeSampleWeb</a>
+                        <a class="navbar-brand" href="<c:url  value="/"/>" >CodeSampleWeb</a>
                         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                             <ul class="navbar-nav flex-grow-1">
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="<c:url value="/api/get-all-user"/>">Luyện tập</a>
+                                    <a class="nav-link text-dark" href="<c:url value="/list-exercise"/>">Luyện tập</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="<c:url value="/api/get-all-adminrole"/>">Lý thuyết</a>
+                                    <a class="nav-link text-dark" href="<c:url value="/lythuyet"/>">Lý thuyết</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="<c:url value="/api/get-all-doexercise"/>">Về chúng tôi</a>
+                                    <a class="nav-link text-dark" href="<c:url value="#"/>">Về chúng tôi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="#">Góp ý</a>
+                                    <a class="nav-link text-dark" href="<c:url value="/feed-back"/>">Góp ý</a>
                                 </li>
                             </ul>
                         </div>

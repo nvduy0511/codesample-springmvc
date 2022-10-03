@@ -1,5 +1,6 @@
 package com.codesample.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class TestCase {
     @Column(name = "output", length = 500)
     private String output;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "idExercise", nullable=false)
     private Exercise exercise;

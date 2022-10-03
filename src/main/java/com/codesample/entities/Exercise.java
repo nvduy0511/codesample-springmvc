@@ -14,7 +14,7 @@ public class Exercise {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
 
     @Column(name = "level", length = 11)
     private String level;
@@ -64,10 +64,12 @@ public class Exercise {
     private Admin admin;
 
     //One to Many relationship
+    @Transient
     @OneToMany(mappedBy = "exercise")
     @JsonIgnore
     private Set<TestCase> testCases;
 
+    @Transient
     @OneToMany(mappedBy = "exercise")
     @JsonIgnore
     private Set<DoExercise> doExercises;
