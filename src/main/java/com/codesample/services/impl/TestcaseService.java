@@ -26,4 +26,9 @@ public class TestcaseService implements ITestcaseService {
         }
         return lsTestCase;
     }
- }
+
+    @Override
+    public List<TestCase> getTestCase(int id) {
+        return  testcaseRepository.getByIdExercise(id);
+    }
+}

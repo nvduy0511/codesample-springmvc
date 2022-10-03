@@ -9,6 +9,16 @@ public class RunCodeRequest {
         return code;
     }
 
+    public RunCodeRequest(){
+
+    }
+
+    public RunCodeRequest(String code, String language, String input) {
+        this.code = code;
+        this.language = language;
+        this.input = input;
+    }
+
     public void setCode(String code) {
         this.code = code;
     }
