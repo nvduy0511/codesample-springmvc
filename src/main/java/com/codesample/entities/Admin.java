@@ -32,6 +32,7 @@ public class Admin {
     @JsonIgnore
     private Set<Exercise> exercises;
 
+    @Transient
     @OneToMany(mappedBy = "admin")
     @JsonIgnore
     private Set<AdminRole> adminRoles;

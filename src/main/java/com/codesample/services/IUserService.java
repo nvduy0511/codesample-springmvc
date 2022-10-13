@@ -9,4 +9,5 @@ public interface IUserService {
     User login(String email, String pass);
     User addUser(String name, String email, String pass);
     String forgotPassword(String email);
+    int getCountUser();
 }

@@ -3,6 +3,7 @@
     <excludes>
         <pattern>/account/*</pattern>
         <pattern>/lythuyet/baihoc/*</pattern>
+        <pattern>/Login/admin/*</pattern>
     </excludes>
 
     <decorator name="web" page="web.jsp">
@@ -10,7 +11,7 @@
     </decorator>
 
     <decorator name="admin" page="admin.jsp">
-        <pattern>/admin*</pattern>
+        <pattern>/admin/*</pattern>
     </decorator>
 
 </decorators>

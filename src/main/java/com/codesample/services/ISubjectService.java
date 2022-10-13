@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ISubjectService {
     List<Subject> findAll();
+    int getCountSubject();
 }

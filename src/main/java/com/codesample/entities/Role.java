@@ -18,6 +18,7 @@ public class Role {
     private String name;
 
     // One to Many relationship
+    @Transient
     @OneToMany(mappedBy = "role")
     @JsonIgnore
     private Set<AdminRole> adminRoles;

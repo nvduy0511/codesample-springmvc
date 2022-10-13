@@ -1,0 +1,50 @@
+input[type="file"] {
+    display: none;
+}
+
+.chooseImg {
+    background-color: rgb(49, 228, 169);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.chooseImg:hover {
+    background-color: #017c63;
+}
+
+.ckedit {
+    width: 100%;
+    background-color: #009879;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.formCkedit {
+    width: 100%;
+}
+
+.ckedit_child {
+    width: 90%;
+    color: white;
+}
+
+.input_ckedit {
+    width: fit-content;
+    text-align: right;
+}
+
+.cus_table {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.custom_table {
+    min-width: 600px;
+}
