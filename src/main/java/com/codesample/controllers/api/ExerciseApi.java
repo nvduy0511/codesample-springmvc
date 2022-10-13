@@ -9,7 +9,7 @@ import com.codesample.models.RunCodeResponse;
 import com.codesample.services.IDoExerciseService;
 import com.codesample.services.IExerciseService;
 import com.codesample.services.IRunCodeService;
-import com.codesample.services.ITestcaseService;
+import com.codesample.services.ITestCaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +24,7 @@ public class ExerciseApi {
     IExerciseService exerciseService;
 
     @Autowired
-    ITestcaseService testcaseService;
+    ITestCaseService testcaseService;
 
     @Autowired
     IRunCodeService runCodeService;

@@ -4,6 +4,7 @@
         <pattern>/account/*</pattern>
         <pattern>/lythuyet/baihoc/*</pattern>
         <pattern>/exercise/*</pattern>
+        <pattern>/Login/admin/*</pattern>
     </excludes>
 
     <decorator name="web" page="web.jsp">

@@ -39,7 +39,7 @@
                             <span>${item.tag}</span>
                         </div>
                         <div class="image_avatar">
-                            <img class="avatar" src="<c:url value="/resources/images/avatar.png"/>">
+                            <img class="avatar" src="<c:url value="/resources/images/avatar.svg"/>">
                         </div>
                         <div class="username">nvduy</div>
                         <div class="item_footer">

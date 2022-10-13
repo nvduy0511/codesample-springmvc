@@ -1,0 +1,623 @@
+:root {
+    /* --first-color: #12192c; */
+    --first-color: whitesmoke;
+    --second-color: #F5A623;
+    /* --white-color:#EDEDED; */
+    --white-color: black;
+    --body-font: 'Poppins', sans-serif;
+    --small-font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+    article{
+        --small-font-size:0.938rem;
+    }
+}
+
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+body {
+    margin: 0px;
+    position: relative;
+    padding: 0 0 0 3.65rem;
+    font-family: var(--body-font);
+    background: #ebeaf0;
+    transition: 0.5s;
+}
+
+#header {
+    background-color: white;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bodys {
+    background-color: #ebeaf0;
+    padding: 10px 15px;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 100vh;
+    background: var(--first-color);
+    padding: 1.25rem 0.5rem 2rem;
+    transition: 0.5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0px 8px;
+}
+
+.nav_logo-icon {
+    margin-right: 0.75rem;
+    width: 30px;
+    height: 30px;
+    color: var(--white-color);
+}
+
+.nav_logo-text {
+    font-size: 1rem;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+.nav_toggle {
+    position: absolute;
+    top: 1.1rem;
+    right: -0.5rem;
+    width: 20px;
+    height: 20px;
+    background: var(--second-color);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    color: var(--white-color);
+    transition: 0.5s;
+}
+.nav_link:hover {
+    background: var(--second-color);
+    color: var(--first-color);
+}
+.nav_icon {
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.nav_text {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.show {
+    width: 250px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.expander {
+    padding: 0 0 0 15.67rem;
+}
+
+.active {
+    background: var(--second-color);
+    color: var(--first-color);
+}
+
+.header_name_avatar {
+    text-align: center;
+    margin-right: 50px;
+}
+
+.item {
+    width: 270px;
+    height: 5rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    box-sizing: border-box;
+}
+
+.item > i {
+    font-size: 30px;
+}
+
+.item > div > .title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.item > div > span {
+    font-size: 19px;
+}
+
+.body_tk {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+
+.cus_image {
+    width: 80px;
+    height: 100%;
+    background-color: #F5A623;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+}
+/*animation content*/
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+.clear {
+    clear: both;
+}
+
+/* -----------------------------------------
+  =CSS3 Loading animations
+-------------------------------------------- */
+
+/* =Elements style
+---------------------- */
+.load-wrapp {
+    float: left;
+    width: 330px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.load-wrapp p {
+    padding: 0 0 20px;
+}
+
+.load-wrapp:last-child {
+    margin-right: 0;
+}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+
+.ring-1 {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 7px dashed #4b9cdb;
+    border-radius: 100%;
+}
+
+.ring-2 {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    border: 4px solid #4b9cdb;
+    border-radius: 100%;
+}
+
+.ball-holder {
+    position: absolute;
+    width: 12px;
+    height: 45px;
+    left: 17px;
+    top: 0px;
+}
+
+.ball {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #4282b3;
+}
+
+.letter-holder {
+    padding: 16px;
+}
+
+.letter {
+    float: left;
+    font-size: 14px;
+    color: #777;
+}
+
+.square {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    background-color: #4b9cdb;
+}
+
+.spinner {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #4b9cdb;
+}
+
+.bubble-2 {
+    top: auto;
+    bottom: 0;
+}
+
+.bar {
+    float: left;
+    width: 15px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #4b9cdb;
+}
+
+/* =Animate the stuff
+------------------------ */
+.load-1 .line:nth-last-child(1) {
+    animation: loadingA 1.5s 1s infinite;
+}
+
+.load-1 .line:nth-last-child(2) {
+    animation: loadingA 1.5s 0.5s infinite;
+}
+
+.load-1 .line:nth-last-child(3) {
+    animation: loadingA 1.5s 0s infinite;
+}
+
+.load-2 .line:nth-last-child(1) {
+    animation: loadingB 1.5s 1s infinite;
+}
+
+.load-2 .line:nth-last-child(2) {
+    animation: loadingB 1.5s 0.5s infinite;
+}
+
+.load-2 .line:nth-last-child(3) {
+    animation: loadingB 1.5s 0s infinite;
+}
+
+.load-3 .line:nth-last-child(1) {
+    animation: loadingC 0.6s 0.1s linear infinite;
+}
+
+.load-3 .line:nth-last-child(2) {
+    animation: loadingC 0.6s 0.2s linear infinite;
+}
+
+.load-3 .line:nth-last-child(3) {
+    animation: loadingC 0.6s 0.3s linear infinite;
+}
+
+.load-4 .ring-1 {
+    animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+.load-5 .ball-holder {
+    animation: loadingE 1.3s linear infinite;
+}
+
+.load-6 .letter {
+    animation-name: loadingF;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    /*bug*/
+    animation-direction: alternate;
+}
+
+.l-1 {
+    animation-delay: 0.48s;
+    font-size: 40px;
+    color:black;
+    font-weight: 700;
+}
+
+.l-2 {
+    animation-delay: 0.6s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-3 {
+    animation-delay: 0.72s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-4 {
+    animation-delay: 0.84s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-5 {
+    animation-delay: 0.96s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-6 {
+    animation-delay: 1.08s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-7 {
+    animation-delay: 1.2s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-8 {
+    animation-delay: 1.32s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-9 {
+    animation-delay: 1.44s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.l-10 {
+    animation-delay: 1.56s;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+.load-7 .square {
+    animation: loadingG 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+.load-8 .line {
+    animation: loadingH 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+.load-9 .spinner {
+    animation: loadingI 2s linear infinite;
+}
+
+.load-9 .bubble-1,
+.load-9 .bubble-2 {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.load-9 .bubble-2 {
+    animation-delay: -1s;
+}
+
+.load-10 .bar {
+    animation: loadingJ 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+@keyframes loadingA {
+0% {
+    height: 15px;
+}
+
+50% {
+    height: 35px;
+}
+
+100% {
+    height: 15px;
+}
+}
+
+@keyframes loadingB {
+0% {
+    width: 15px;
+}
+
+50% {
+    width: 35px;
+}
+
+100% {
+    width: 15px;
+}
+}
+
+@keyframes loadingC {
+0% {
+    transform: translate(0, 0);
+}
+
+50% {
+    transform: translate(0, 15px);
+}
+
+100% {
+    transform: translate(0, 0);
+}
+}
+
+@keyframes loadingD {
+0% {
+    transform: rotate(0deg);
+}
+
+50% {
+    transform: rotate(180deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+
+@keyframes loadingE {
+0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+
+@keyframes loadingF {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingG {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(70px, 0) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes loadingH {
+    0% {
+        width: 15px;
+    }
+
+    50% {
+        width: 35px;
+        padding: 4px;
+    }
+
+    100% {
+        width: 15px;
+    }
+}
+
+@keyframes loadingI {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes loadingJ {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+    }
+}
+

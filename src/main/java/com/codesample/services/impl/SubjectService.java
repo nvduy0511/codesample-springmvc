@@ -19,4 +19,11 @@ public class SubjectService implements ISubjectService {
     public List<Subject> findAll() {
         return subjectRepository.findAll();
     }
+
+    @Override
+    public int getCountSubject()
+    {
+        int count = subjectRepository.getCountSubject();
+        return count;
+    }
 }
