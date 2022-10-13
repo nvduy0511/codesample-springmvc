@@ -54,4 +54,10 @@ public class UserService implements IUserService {
         }
         return "Error because not exits email in database!";
     }
+
+    @Override
+    public int getCountUser(){
+        int count = userRepository.getCountUser();
+        return count;
+    }
 }

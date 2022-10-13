@@ -16,7 +16,6 @@
 	<c:if test="${user eq null}">
 		<c:redirect url="/account/login-or-register"/>
 	</c:if>
-
 	<div class="Content">
 		<div class="seccond_content">
 			<h1>Lộ trình trở thành lập trình viên</h1>
