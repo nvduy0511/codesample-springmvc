@@ -1,5 +1,6 @@
 package com.codesample.services.impl;
 
+import com.codesample.entities.Subject;
 import com.codesample.entities.TestCase;
 import com.codesample.repositories.TestcaseRepository;
 import com.codesample.services.ITestcaseService;
@@ -8,18 +9,25 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Service
 public class TestcaseService implements ITestcaseService {
-
     @Autowired
-    TestcaseRepository testcaseRepository;
+    TestcaseRepository testCaseRepository;
 
     @Override
+    public List<TestCase> findAll() {
+        return testCaseRepository.findAll();
+    }
+
+    @Override
+    public List<TestCase> getTestCaseByID(int id)
+    {
+        return testCaseRepository.getTCByID(id);
+    }
+    @Override
     public List<Integer> getByIdExercise(int id) {
-        int len = testcaseRepository.getByIdExercise(id).size();
+        int len = testCaseRepository.getByIdExercise(id).size();
         List<Integer> lsTestCase = new ArrayList<Integer>();
         for (int i = 0; i < len; i++) {
             lsTestCase.add(2);
@@ -29,6 +37,6 @@ public class TestcaseService implements ITestcaseService {
 
     @Override
     public List<TestCase> getTestCase(int id) {
-        return  testcaseRepository.getByIdExercise(id);
+        return  testCaseRepository.getByIdExercise(id);
     }
 }

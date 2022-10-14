@@ -9,6 +9,9 @@ import java.util.List;
 
 @Repository
 public interface TheoryRepository extends JpaRepository<Theory, Integer> {
-//    @Query(value = "SELECT * FROM USERS WHERE EMAIL_ADDRESS = ?0", nativeQuery = true);
-    List<Theory> findAllBySubject_Id(int subject);
+    @Query("select th from Theory th where th.subject.id = ?1")
+    List<Theory> findAllBySubject_Id(int id);
+
+    @Query("SELECT COUNT(id) FROM Theory")
+    int getCountTheory();
 }

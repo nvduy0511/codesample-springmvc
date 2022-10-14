@@ -1,0 +1,126 @@
+.custom_table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    /* width: 100%; */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px 0px rgb(40 50 56 / 24%), 0px 2px 4px 0px rgb(40 50 56 / 24%);
+}
+
+.custom_table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.custom_table th,
+.custom_table td {
+    padding: 12px 15px;
+    white-space: nowrap;
+}
+
+.custom_table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: white;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+}
+
+.button_addCode {
+    outline: none;
+    border: none;
+    background-color: #33d3b3;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button_addCode:hover {
+    background-color: #096c58;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab {
+    padding: 10px 0px;
+    width: 370px;
+    height: min-content;
+    background-color: #009879;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tab_content {
+    color: white;
+    width: fit-content;
+    text-align: right;
+}
+
+.input_button {
+    text-align: center;
+}
+
+.responsive-table {
+    overflow-x: auto;
+    border-radius: 5px;
+    overflow-y: auto;
+    height: 80vh;
+}
+
+.cus_table {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+}
+
+.btn_even:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.menu-numpage {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.menu-numpage > div > ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.menu-numpage > div > ul > li {
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+}
+
+.input_BTCode{
+    outline: none;
+    border: 1px solid;
+    border-color: #D1D1D1;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}

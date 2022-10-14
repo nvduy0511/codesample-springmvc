@@ -23,4 +23,9 @@ public class TheoryService implements ITheoryService {
         return theoryRepository.findOne(id);
     }
 
+    @Override
+    public int getCountTheory(){
+        int count = theoryRepository.getCountTheory();
+        return count;
+    }
 }
