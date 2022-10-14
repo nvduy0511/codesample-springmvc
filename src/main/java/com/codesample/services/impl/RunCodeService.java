@@ -5,7 +5,7 @@ import com.codesample.models.RunCodeRequest;
 import com.codesample.models.RunCodeResponse;
 import com.codesample.services.IExerciseService;
 import com.codesample.services.IRunCodeService;
-import com.codesample.services.ITestCaseService;
+import com.codesample.services.ITestcaseService;
 import com.codesample.services.fetchapi.FetchRunCode;
 import com.codesample.services.fetchapi.RunCodeGenerator;
 import lombok.SneakyThrows;
@@ -21,7 +21,7 @@ import java.util.List;
 public class RunCodeService  implements IRunCodeService {
 
     @Autowired
-    ITestCaseService testcaseService;
+    ITestcaseService testcaseService;
 
     @Override
     public RunCodeResponse runCode(RunCodeRequest runCodeRequest) {

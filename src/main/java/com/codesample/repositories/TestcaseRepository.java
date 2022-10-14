@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TestCaseRepository extends JpaRepository<TestCase, Integer> {
+public interface TestcaseRepository extends JpaRepository<TestCase, Integer> {
     @Query("select tc from TestCase tc where tc.exercise.id = ?1")
     List<TestCase> getTCByID(int id);
     @Query("SELECT u FROM TestCase u WHERE u.exercise.id = ?1")

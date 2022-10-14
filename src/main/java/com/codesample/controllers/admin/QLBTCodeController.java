@@ -4,9 +4,9 @@ import com.codesample.entities.AdminRole;
 import com.codesample.entities.Exercise;
 import com.codesample.entities.TestCase;
 import com.codesample.repositories.ExerciseRepository;
-import com.codesample.repositories.TestCaseRepository;
+import com.codesample.repositories.TestcaseRepository;
 import com.codesample.services.IExerciseService;
-import com.codesample.services.ITestCaseService;
+import com.codesample.services.ITestcaseService;
 import com.mysql.cj.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -25,13 +25,13 @@ public class QLBTCodeController {
     private IExerciseService exerciseService;
 
     @Autowired
-    private ITestCaseService testCaseService;
+    private ITestcaseService testCaseService;
 
     @Autowired
     private ExerciseRepository exerciseRepository;
 
     @Autowired
-    private TestCaseRepository testCaseRepository;
+    private TestcaseRepository testCaseRepository;
 
     @RequestMapping(value = "/admin/QLBTCode/", method = RequestMethod.GET)
     public ModelAndView quanLyBTCode(HttpSession session){
